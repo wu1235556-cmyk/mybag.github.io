@@ -39,7 +39,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 </script>
 <!-- TikTok Pixel Code End -->
 
-    <style>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -352,5 +352,70 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             }
         }, 1000);
     </script>
+
+    <!-- TikTok Enhanced Event Tracking -->
+    <script>
+        // 页面访问事件
+        window.addEventListener('load', function() {
+            if (window.ttq) {
+                ttq.track('ViewContent', {
+                    contents: [
+                        {
+                            content_id: 'WSB001',
+                            content_type: 'product_group',
+                            content_name: 'Wu Sheng Bag Wholesale Store'
+                        }
+                    ],
+                    value: 0,
+                    currency: 'USD'
+                });
+            }
+        });
+
+        // WhatsApp 按钮点击事件
+        document.addEventListener('DOMContentLoaded', function() {
+            const btns = document.querySelectorAll('.whatsapp-btn');
+
+            btns.forEach((btn, index) => {
+                btn.addEventListener('click', function() {
+
+                    // Facebook Pixel
+                    if (window.fbq) {
+                        fbq('track', 'Contact');
+                    }
+
+                    // TikTok Contact Event
+                    if (window.ttq) {
+                        ttq.track('Contact', {
+                            contents: [
+                                {
+                                    content_id: 'WA001',
+                                    content_type: 'button',
+                                    content_name: 'WhatsApp Contact Button'
+                                }
+                            ],
+                            value: 0,
+                            currency: 'USD',
+                            button_position: index === 0 ? 'top' : 'bottom'
+                        });
+
+                        // ClickButton Event
+                        ttq.track('ClickButton', {
+                            contents: [
+                                {
+                                    content_id: 'BTN001',
+                                    content_type: 'button',
+                                    content_name: 'WhatsApp CTA'
+                                }
+                            ],
+                            value: 0,
+                            currency: 'USD'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
