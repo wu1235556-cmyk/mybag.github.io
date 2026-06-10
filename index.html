@@ -6,295 +6,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Wu Sheng Bag Wholesale Store</title>
-    
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1347286423937197');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1347286423937197&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-<!-- TikTok Pixel Code Start -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-
-  ttq.load('D8JETNBC77U6H4V48N10');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- TikTok Pixel Code End -->
 
 <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
 
-        /* 深灰色渐变背景 */
-        body {
-            background: linear-gradient(135deg, #ffe4e1 0%, #ffe4e1 50%, #ffe4e1 100%);
-            min-height: 100vh;
-            padding: 10px;
-            position: relative;
-            overflow-x: hidden;
-        }
+body {
+    background: linear-gradient(135deg, #ffe4e1 0%, #ffe4e1 50%, #ffe4e1 100%);
+    min-height: 100vh;
+    padding: 10px;
+    overflow-x: hidden;
+}
 
-        /* 动态雪花动画 */
-        .snowflake {
-            position: fixed;
-            top: -10%;
-            z-index: 999;
-            color: #48f3d9;
-            font-size: 60px;
-            pointer-events: none;
-            animation: snowfall linear infinite;
-        }
-        @keyframes snowfall {
-            0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
-            100% { transform: translateY(100vh) rotate(360deg); opacity: 0.3; }
-        }
+/* 统一宽度容器 */
+.content-wrapper {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 14px auto;
+}
 
-        /* ========== 顶部框 高度调矮 ========== */
-        .top-banner {
-            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
-            border-radius: clamp(16px, 4vw, 24px);
-            padding: clamp(18px, 4vw, 24px) clamp(14px, 4vw, 20px);
-            margin-bottom: clamp(10px, 3vw, 14px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            position: relative;
-            z-index: 10;
-            width: 100%;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #000000;
-        }
-        .banner-title {
-            font-size: clamp(18px, 5vw, 24px);
-            color: #000000;
-            font-weight: 700;
-            margin-bottom: clamp(6px, 2vw, 10px);
-            line-height: 1.3;
-        }
-        .banner-icons {
-            font-size: clamp(22px, 6vw, 32px);
-            margin: clamp(6px, 2vw, 10px) 0;
-        }
-        .banner-subtitle {
-            font-size: clamp(14px, 4vw, 18px);
-            color: #000000;
-            font-weight: 500;
-        }
+/* 顶部区域 */
+.top-banner {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-        /* 自适应按钮 */
-        .whatsapp-btn {
-            display: inline-block;
-            background: #09712f !important;
-            color: white !important;
-            font-size: clamp(14px, 3.8vw, 18px);
-            font-weight: 600;
-            padding: clamp(14px, 4vw, 20px);
-            border-radius: clamp(12px, 3vw, 18px);
-            text-decoration: none;
-            width: 100%;
-            box-shadow: 0 5px 15px rgba(37,211,102,0.35);
-            transition: all 0.3s ease;
-            text-align: center;
-            position: relative;
-            z-index: 10;
-        }
-        .first-whatsapp-btn,
-        .bottom-whatsapp-btn {
-            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
-            border-radius: clamp(16px, 4vw, 24px);
-            padding: clamp(10px, 3vw, 14px);
-            margin-bottom: clamp(10px, 3vw, 14px);
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            position: relative;
-            z-index: 10;
-            width: 100%;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.banner-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 
-        /* 自适应图片 保持高度 */
-        .brand-banner {
-            width: 100%;
-            max-width: 480px;
-            height: auto;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto clamp(12px, 3vw, 16px);
-            border-radius: clamp(14px, 3.5vw, 20px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            position: relative;
-            z-index: 10;
-        }
+.banner-icons {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
 
-        /* ========== 自适应服务卡片 ========== */
-        .features-section {
-            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
-            border-radius: clamp(16px, 4vw, 24px);
-            padding: clamp(14px, 4vw, 20px) clamp(10px, 3vw, 14px);
-            margin: 0 auto clamp(12px, 3vw, 16px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: clamp(6px, 2vw, 10px);
-            width: 100%;
-            max-width: 480px;
-            position: relative;
-            z-index: 10;
-            justify-items: center;
-        }
-        .feature-card {
-            text-align: center;
-            padding: clamp(10px, 3vw, 16px) 4px;
-            border-radius: clamp(12px, 3vw, 18px);
-            background: #ffffff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            width: 100%;
-            transition: all 0.3s ease;
-        }
-        .feature-icon {
-            font-size: clamp(20px, 5vw, 28px);
-            margin-bottom: clamp(4px, 1.5vw, 8px);
-        }
-        .feature-text {
-            font-size: clamp(11px, 2.8vw, 14px);
-            color: #1a1a1;
-            font-weight: 600;
-            line-height: 1.3;
-        }
+.banner-subtitle {
+    font-size: 16px;
+}
 
-        /* ========== 倒计时框 【已调到最矮】 ========== */
-        .countdown-section {
-            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
-            border-radius: clamp(16px, 4vw, 24px);
-            padding: clamp(12px, 3vw, 16px) clamp(10px, 3vw, 14px);
-            margin-bottom: clamp(12px, 3vw, 16px);
-            text-align: center;
-            color: #d81b60;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            position: relative;
-            z-index: 10;
-            width: 100%;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .countdown-title {
-            font-size: clamp(14px, 4vw, 18px);
-            margin-bottom: clamp(6px, 2vw, 8px);
-            font-weight: 700;
-        }
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: clamp(8px, 2.5vw, 12px);
-        }
-        
-        .time-box {
-            background: #8B0000;
-            border-radius: clamp(10px, 2.5vw, 14px);
-            padding: clamp(6px, 2vw, 10px) clamp(8px, 2.5vw, 12px);
-            min-width: clamp(50px, 18vw, 80px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            color: #ffffff;
-        }
-        .time-number {
-            font-size: clamp(20px, 7vw, 32px);
-            font-weight: 700;
-            line-height: 1;
-        }
-        .time-label {
-            font-size: clamp(10px, 2vw, 12px);
-            margin-top: 4px;
-            opacity: 0.95;
-        }
+/* 按钮 */
+.whatsapp-btn {
+    display: block;
+    width: 100%;
+    background: #09712f;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 16px;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(37,211,102,0.35);
+}
 
-    </style>
+/* 图片区域 */
+.image-wrapper {
+    width: 100%;
+}
+
+.full-width-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 功能卡片 */
+.features-section {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+    border-radius: 20px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feature-card {
+    background: white;
+    border-radius: 16px;
+    padding: 12px 6px;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.feature-text {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* 倒计时 */
+.countdown-section {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+    border-radius: 20px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.countdown-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.time-box {
+    background: #8B0000;
+    color: white;
+    border-radius: 14px;
+    padding: 10px 14px;
+}
+
+.time-number {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.time-label {
+    font-size: 12px;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- 雪花动画 -->
-    <script>
-        function createSnow() {
-            const count = 35;
-            for(let i=0;i<count;i++) {
-                let flake = document.createElement('div');
-                flake.className = 'snowflake';
-                flake.textContent = '❄';
-                
-                let size = Math.random()*20 + 20;
-                let left = Math.random()*100;
-                let dur = Math.random()*8 + 6;
-                let delay = Math.random()*10;
-                
-                flake.style.cssText = `
-                    font-size:${size}px;
-                    left:${left}%;
-                    animation-duration:${dur}s;
-                    animation-delay:${delay}s;
-                `;
-                document.body.appendChild(flake);
-            }
-        }
-        window.addEventListener('load',createSnow);
-    </script>
-
-    <!-- WhatsApp 点击追踪 Contact 事件 -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btns = document.querySelectorAll('.whatsapp-btn');
-            btns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    if (window.fbq) {
-                        fbq('track', 'Contact');
-                    }
-                });
-            });
-        });
-    </script>
-
-    <!-- 页面内容 -->
+<div class="content-wrapper">
     <div class="top-banner">
         <h1 class="banner-title">Wholesale Store</h1>
-        <div class="banner-icons">👜 👟 ⌚ 👕 💍 🕶️ </div>
-        <h2 class="banner-subtitle">Bags,shoes,watch,clothing & sunglasses</h2>
+        <div class="banner-icons">👜 👟 ⌚ 👕 💍 🕶️</div>
+        <h2 class="banner-subtitle">Bags, shoes, watch, clothing & sunglasses</h2>
     </div>
+</div>
 
-    <div class="first-whatsapp-btn">
-        <a href="https://walink.ai/aU6Rkoq" class="whatsapp-btn" target="_blank">
-            👉 💼7/24 WhatsApp 🛒 👈
-        </a>
-    </div>
+<div class="content-wrapper">
+    <a href="https://walink.ai/aU6Rkoq" class="whatsapp-btn" target="_blank">
+        👉 💼7/24 WhatsApp 🛒 👈
+    </a>
+</div>
 
-    <img src="https://raw.githubusercontent.com/wu1235556-cmyk/mybag.github.io/refs/heads/main/2-22021QG313215.jpg" 
-         alt="Production workshop" 
-         class="Production-workshop">
+<!-- 图片宽度与上下内容完全一致 -->
+<div class="content-wrapper image-wrapper">
+    <img src="https://raw.githubusercontent.com/wu1235556-cmyk/mybag.github.io/refs/heads/main/2-22021QG313215.jpg"
+         alt="Production workshop"
+         class="full-width-img">
+</div>
 
+<div class="content-wrapper">
     <div class="features-section">
         <div class="feature-card">
             <div class="feature-icon">🚚</div>
@@ -309,113 +186,29 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             <p class="feature-text">Online 24 hours</p>
         </div>
     </div>
+</div>
 
+<div class="content-wrapper">
     <div class="countdown-section">
-        <div class="countdown-title" id="countdown-title">Limited Time Offer Countdown</div>
+        <div class="countdown-title">Limited Time Offer Countdown</div>
         <div class="countdown-timer">
             <div class="time-box">
-                <div class="time-number" id="minutes">02</div>
+                <div class="time-number">02</div>
                 <div class="time-label">minute</div>
             </div>
             <div class="time-box">
-                <div class="time-number" id="seconds">00</div>
+                <div class="time-number">00</div>
                 <div class="time-label">second</div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="bottom-whatsapp-btn">
-        <a href="https://walink.ai/aU6Rkoq" class="whatsapp-btn" target="_blank">
-            📞 Click Contact WhatsApp
-        </a>
-    </div>
-
-    <!-- 倒计时JS -->
-    <script>
-        let totalTime = 300;
-        const minutesEl = document.getElementById('minutes');
-        const secondsEl = document.getElementById('seconds');
-        const titleEl = document.getElementById('countdown-title');
-
-        const countdown = setInterval(() => {
-            const mins = Math.floor(totalTime / 60);
-            const secs = totalTime % 60;
-            minutesEl.textContent = mins.toString().padStart(2, '0');
-            secondsEl.textContent = secs.toString().padStart(2, '0');
-            totalTime--;
-
-            if (totalTime < 0) {
-                clearInterval(countdown);
-                titleEl.textContent = 'Limited Time Offer Ended';
-                minutesEl.textContent = '00';
-                secondsEl.textContent = '00';
-            }
-        }, 1000);
-    </script>
-
-    <!-- TikTok Enhanced Event Tracking -->
-    <script>
-        // 页面访问事件
-        window.addEventListener('load', function() {
-            if (window.ttq) {
-                ttq.track('ViewContent', {
-                    contents: [
-                        {
-                            content_id: 'WSB001',
-                            content_type: 'product_group',
-                            content_name: 'Wu Sheng Bag Wholesale Store'
-                        }
-                    ],
-                    value: 0,
-                    currency: 'USD'
-                });
-            }
-        });
-
-        // WhatsApp 按钮点击事件
-        document.addEventListener('DOMContentLoaded', function() {
-            const btns = document.querySelectorAll('.whatsapp-btn');
-
-            btns.forEach((btn, index) => {
-                btn.addEventListener('click', function() {
-
-                    // Facebook Pixel
-                    if (window.fbq) {
-                        fbq('track', 'Contact');
-                    }
-
-                    // TikTok Contact Event
-                    if (window.ttq) {
-                        ttq.track('Contact', {
-                            contents: [
-                                {
-                                    content_id: 'WA001',
-                                    content_type: 'button',
-                                    content_name: 'WhatsApp Contact Button'
-                                }
-                            ],
-                            value: 0,
-                            currency: 'USD',
-                            button_position: index === 0 ? 'top' : 'bottom'
-                        });
-
-                        // ClickButton Event
-                        ttq.track('ClickButton', {
-                            contents: [
-                                {
-                                    content_id: 'BTN001',
-                                    content_type: 'button',
-                                    content_name: 'WhatsApp CTA'
-                                }
-                            ],
-                            value: 0,
-                            currency: 'USD'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+<div class="content-wrapper">
+    <a href="https://walink.ai/aU6Rkoq" class="whatsapp-btn" target="_blank">
+        📞 Click Contact WhatsApp
+    </a>
+</div>
 
 </body>
 </html>
