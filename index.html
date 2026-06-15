@@ -2,33 +2,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-
-  fbq('init', '1316626760014675');
-  fbq('track', 'PageView');
-  
-    fbq('track', 'ViewContent');
-    fbq('track', 'AddToCart');
- 
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1316626760014675&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-   
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1347286423937197');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1347286423937197&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
     <link rel="apple-touch-icon" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Wholesale Store</title>
+    <title>Wu Sheng Bag Wholesale Store</title>
 
 <style>
 * {
@@ -232,6 +226,55 @@ body {
         📞 Click Contact WhatsApp
     </a>
 </div>
+
+
+<script>
+(function () {
+  const COOLDOWN = 4000; // 4s anti-spam
+
+  function getKey(pos) {
+    return "wa_click_" + pos;
+  }
+
+  function canSend(pos) {
+    const key = getKey(pos);
+    const last = localStorage.getItem(key);
+    const now = Date.now();
+
+    if (last && (now - parseInt(last)) < COOLDOWN) {
+      return false;
+    }
+    localStorage.setItem(key, now.toString());
+    return true;
+  }
+
+  function sendEvent(pos) {
+    const eventId = "evt_" + pos + "_" + Date.now();
+
+    fbq('track', 'Lead', {
+      content_name: 'WhatsApp Contact',
+      method: 'whatsapp',
+      position: pos,
+      event_source: 'website'
+    }, {
+      eventID: eventId
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll('.whatsapp-btn');
+
+    buttons.forEach(function(btn, index) {
+      const pos = index === 0 ? 'top' : 'bottom';
+
+      btn.addEventListener('click', function () {
+        if (!canSend(pos)) return;
+        sendEvent(pos);
+      });
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
