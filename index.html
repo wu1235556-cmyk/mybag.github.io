@@ -1,8 +1,9 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,15 +16,12 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1347286423937197');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1347286423937197&ev=PageView&noscript=1"
-/></noscript>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=1347286423937197&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
 <!-- End Meta Pixel Code -->
-    <link rel="apple-touch-icon" href="favicon.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Wu Sheng Bag Wholesale Store</title>
-
+<link href="favicon.png" rel="apple-touch-icon"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Wholesale Store</title>
 <style>
 * {
     margin: 0;
@@ -86,17 +84,7 @@ body {
 }
 
 /* 图片区域 */
-.image-wrapper {
-    width: 100%;
-}
 
-.full-width-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
 
 /* 功能卡片 */
 .features-section {
@@ -162,72 +150,175 @@ body {
 .time-label {
     font-size: 12px;
 }
+
+/* FAQ SECTION */
+.faq-container{
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  background: transparent;
+}
+
+.faq-item{
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 16px 0;
+  cursor: pointer;
+}
+
+.faq-question{
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 30px;
+  color: #222;
+}
+
+.faq-question::after{
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.faq-item.active .faq-question::after{
+  content: "-";
+}
+
+.faq-answer{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 0.35s ease;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.faq-answer > div{
+  overflow: hidden;
+}
+
+.faq-item.active .faq-answer{
+  grid-template-rows: 1fr;
+  margin-top: 10px;
+}
+
+/* SNOW EFFECT */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: #fff;
+    font-size: 12px;
+    user-select: none;
+    pointer-events: none;
+    z-index: 9999;
+    animation: snow_fall linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes snow_fall {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(110vh); }
+}
+
 </style>
 </head>
-
 <body>
-
+<div id="snow-container"></div>
 <div class="content-wrapper">
-    <div class="top-banner">
-        <h1 class="banner-title">Wholesale Store</h1>
-        <div class="banner-icons">👜 👟 ⌚ 👕 💍 🕶️</div>
-        <h2 class="banner-subtitle">Bags, shoes, watch, clothing & sunglasses</h2>
-    </div>
+<div class="top-banner">
+<h1 class="banner-title">Wholesale Store</h1>
+<div class="banner-icons">👜 👟 ⌚ 👕 💍 🕶️</div>
+<h2 class="banner-subtitle">Bags, shoes, watch, clothing &amp; sunglasses</h2>
 </div>
-
+</div>
 <div class="content-wrapper">
-    <a href="https://walink.ai/aU6Rkoq" class="whatsapp-btn" target="_blank">
+<a class="whatsapp-btn" href="https://walink.ai/aU6Rkoq" target="_blank">
         👉 💼7/24 WhatsApp 🛒 👈
     </a>
+<div class="content-wrapper faq-container">
+<div class="faq-item">
+<div class="faq-question">How do I order and pay?</div>
+<div class="faq-answer">
+<div>
+        To purchase you must contact our dedicated customer service on WhatsApp.
+      </div>
 </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">What payment methods do you support?</div>
+<div class="faq-answer">
+<div>
+        We accept multiple payment methods, including PayPal, Western Union, Zelle Cash, Apple Pay, etc.
+      </div>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Buyer Protection</div>
+<div class="faq-answer">
+<div>
+        We will film a quality inspection video for your review and confirmation before shipping. We will only ship the goods after you have confirmed that everything is correct. If you find any discrepancies between the received goods and the actual product, please contact customer service and we will provide you with a satisfactory solution.
+      </div>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Logistics and transportation policies</div>
+<div class="faq-answer">
+<div>
+       Orders over $150 USD qualify for free shipping. Each package is insured. If you do not receive your order due to shipping issues, please contact us for a reshipment.
+      </div>
+</div>
+</div>
+</div>
+<script>
+document.querySelectorAll(".faq-item").forEach(item => {
+  item.addEventListener("click", () => {
+    document.querySelectorAll(".faq-item").forEach(i => {
+      if(i !== item) i.classList.remove("active");
+    });
+    item.classList.toggle("active");
+  });
+});
+</script>
 
+</div>
 <!-- 图片宽度与上下内容完全一致 -->
-<div class="content-wrapper image-wrapper">
-    <img src="https://raw.githubusercontent.com/wu1235556-cmyk/mybag.github.io/refs/heads/main/2-22021QG313215.jpg"
-         alt="Production workshop"
-         class="full-width-img">
-</div>
-
 <div class="content-wrapper">
-    <div class="features-section">
-        <div class="feature-card">
-            <div class="feature-icon">🚚</div>
-            <p class="feature-text">Fast Shipping</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🏆</div>
-            <p class="feature-text">Top quality</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">💼</div>
-            <p class="feature-text">Online 24 hours</p>
-        </div>
-    </div>
+<div class="features-section">
+<div class="feature-card">
+<div class="feature-icon">🚚</div>
+<p class="feature-text">Fast Shipping</p>
 </div>
-
-<div class="content-wrapper">
-    <div class="countdown-section">
-        <div class="countdown-title">Limited Time Offer Countdown</div>
-        <div class="countdown-timer">
-            <div class="time-box">
-                <div class="time-number">02</div>
-                <div class="time-label">minute</div>
-            </div>
-            <div class="time-box">
-                <div class="time-number">00</div>
-                <div class="time-label">second</div>
-            </div>
-        </div>
-    </div>
+<div class="feature-card">
+<div class="feature-icon">🏆</div>
+<p class="feature-text">Top quality</p>
 </div>
-
+<div class="feature-card">
+<div class="feature-icon">💼</div>
+<p class="feature-text">Online 24 hours</p>
+</div>
+</div>
+</div>
 <div class="content-wrapper">
-    <a href="https://walink.ai/aU6Rkoq" class="whatsapp-btn" target="_blank">
+<div class="countdown-section">
+<div class="countdown-title">Limited Time Offer Countdown</div>
+<div class="countdown-timer">
+<div class="time-box">
+<div class="time-number">02</div>
+<div class="time-label">minute</div>
+</div>
+<div class="time-box">
+<div class="time-number">00</div>
+<div class="time-label">second</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-wrapper">
+<a class="whatsapp-btn" href="https://walink.ai/aU6Rkoq" target="_blank">
         📞 Click Contact WhatsApp
     </a>
 </div>
-
-
 <script>
 (function () {
   const COOLDOWN = 4000; // 4s anti-spam
@@ -276,5 +367,49 @@ body {
 })();
 </script>
 
+<script>
+(function(){
+  let total = 120; // 2 minutes
+  const minEl = document.querySelector('.countdown-section .time-box:nth-child(1) .time-number');
+  const secEl = document.querySelector('.countdown-section .time-box:nth-child(2) .time-number');
+
+  function update(){
+    let m = Math.floor(total / 60);
+    let s = total % 60;
+    if(minEl && secEl){
+      minEl.textContent = String(m).padStart(2,'0');
+      secEl.textContent = String(s).padStart(2,'0');
+    }
+    if(total <= 0){
+      clearInterval(timer);
+    }
+    total--;
+  }
+  update();
+  const timer = setInterval(update,1000);
+})();
+</script>
+
+<script>
+(function(){
+    const container = document.getElementById("snow-container");
+    if(!container) return;
+
+    const count = 35;
+    for(let i=0;i<count;i++){
+        const s = document.createElement("div");
+        s.className = "snowflake";
+        s.innerHTML = "❄";
+        s.style.left = Math.random()*100 + "vw";
+        s.style.animationDuration = (3 + Math.random()*5) + "s";
+        s.style.fontSize = (10 + Math.random()*16) + "px";
+        s.style.opacity = Math.random();
+
+        container.appendChild(s);
+    }
+})();
+</script>
+
 </body>
+
 </html>
